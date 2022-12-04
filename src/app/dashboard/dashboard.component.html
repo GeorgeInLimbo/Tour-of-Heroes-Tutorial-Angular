@@ -1,0 +1,8 @@
+<h2>Bottom Bitches</h2>
+<div class="hos-menu">
+    <a *ngFor="let ho of hos" routerLink="/detail/{{ho.id}}">
+        {{ho.name}}
+    </a>
+</div>
+
+<app-ho-search></app-ho-search>

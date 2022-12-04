@@ -1,0 +1,18 @@
+<h2>Stable of Hos</h2>
+<ul class="hos">
+    <li *ngFor="let ho of hos">
+        <a routerLink="/detail/{{ho.id}}">
+            <span class="badge">{{ho.id}}</span>{{ho.name}}
+        </a>
+        <button type="button" class="delete" title="delete ho" (click)="delete(ho)">x</button>
+    </li>
+</ul>
+<div>
+    <label for="new-ho">Ho name: </label>
+    <input id="new-ho" #hoName />
+
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button type="button" class="add-button" (click)="add(hoName.value); hoName.value=''">
+        Add ho
+    </button>
+</div>
